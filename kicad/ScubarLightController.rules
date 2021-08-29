@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 102)
+    (start_pass_no 650)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -41,10 +41,16 @@
     (attach off)
   )
   (via 
+    "Via[0-1]_800:400_um-power" "Via[0-1]_800:400_um" power
+  )
+  (via 
     "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
   )
   (via 
     "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    power "Via[0-1]_800:400_um-power"
   )
   (via_rule
     default "Via[0-1]_800:400_um"
@@ -53,16 +59,16 @@
     "kicad_default" "Via[0-1]_800:400_um-kicad_default"
   )
   (class default
-    GND +12V "Net-(J2-Pad2)" "Net-(J3-Pad1)" "Net-(J4-Pad2)" "Net-(J5-Pad1)" "Net-(J6-Pad1)" "LED_1"
-    "LED_2" +5V "Net-(R7-Pad2)" "S4_PWM" "Net-(Q3-Pad3)" "S1_SEL" "S4_SEL" "S3_PWM"
-    "S3_SEL" "S2_SEL" "S1_PWM" "S2_PWM" "Net-(Q4-Pad3)" "Net-(Q3-Pad2)" "Net-(Q5-Pad3)" "Net-(Q4-Pad2)"
-    "Net-(J7-Pad1)" +28V "/31V Fairy Lights/L1_B" "/31V Fairy Lights/L1_A" "/31V Fairy Lights/L2_B" "/31V Fairy Lights/L2_A" "/5V Fairy Lights/L1_B" "/5V Fairy Lights/L1_A"
-    "/5V Fairy Lights/L2_B" "/5V Fairy Lights/L2_A" "Net-(D1-Pad2)" "Net-(Q6-Pad3)" "Net-(Q5-Pad2)" "Net-(R8-Pad2)" "Net-(Q6-Pad2)" "Net-(R15-Pad2)"
-    "Net-(R16-Pad2)" "Net-(J6-Pad2)" "Net-(J7-Pad2)" "Net-(J9-Pad2)" "Net-(J9-Pad1)" "/Adressable RGB/RGB_1_OUT" "Net-(Q1-Pad2)" "Net-(Q2-Pad2)"
-    "Net-(Q7-Pad2)" "LED_3" "Net-(R24-Pad1)" "Net-(R25-Pad1)" "Net-(R26-Pad1)" "Net-(R27-Pad1)" "/Adressable RGB/RGB_2_OUT" "/Adressable RGB/RGB_3_OUT"
-    "/Adressable RGB/RGB_4_OUT" "unconnected-(U4-Pad30)" "unconnected-(U4-Pad25)" "unconnected-(U4-Pad24)" "unconnected-(U4-Pad3)" "unconnected-(U4-Pad19)" "unconnected-(U4-Pad18)" "unconnected-(U4-Pad13)"
-    "unconnected-(U4-Pad12)" "unconnected-(U4-Pad11)" "unconnected-(U4-Pad10)" "unconnected-(U4-Pad2)" "unconnected-(U4-Pad1)" "/Adressable RGB/RGB_2_IN" "/Adressable RGB/RGB_4_IN" "RGB_DATA_1"
-    "/Adressable RGB/RGB_3_IN" "unconnected-(U4-Pad4)" "unconnected-(U4-Pad5)" "unconnected-(U4-Pad27)"
+    GND "Net-(J14-Pad2)" "Net-(J10-Pad1)" "LED_1" "LED_2" +5V "Net-(R7-Pad2)" "S4_PWM"
+    "Net-(Q3-Pad3)" "S1_SEL" "S4_SEL" "S3_PWM" "S3_SEL" "S2_SEL" "S1_PWM" "S2_PWM"
+    "Net-(Q4-Pad3)" "Net-(Q3-Pad2)" "Net-(Q5-Pad3)" "Net-(Q4-Pad2)" "Net-(J7-Pad1)" +28V "/31V Fairy Lights/L1_B" "/31V Fairy Lights/L1_A"
+    "/31V Fairy Lights/L2_B" "/31V Fairy Lights/L2_A" "/5V Fairy Lights/L1_B" "/5V Fairy Lights/L1_A" "/5V Fairy Lights/L2_B" "/5V Fairy Lights/L2_A" "Net-(D1-Pad2)" "Net-(Q6-Pad3)"
+    "Net-(Q5-Pad2)" "Net-(R8-Pad2)" "Net-(Q6-Pad2)" "Net-(R15-Pad2)" "Net-(R16-Pad2)" "Net-(J6-Pad2)" "Net-(J7-Pad2)" "Net-(J9-Pad2)"
+    "Net-(J17-Pad2)" "/Adressable RGB/RGB_1_OUT" "Net-(Q1-Pad2)" "Net-(Q2-Pad2)" "Net-(Q7-Pad2)" "LED_3" "Net-(R24-Pad1)" "Net-(R25-Pad1)"
+    "Net-(R26-Pad1)" "Net-(R27-Pad1)" "/Adressable RGB/RGB_2_OUT" "/Adressable RGB/RGB_3_OUT" "/Adressable RGB/RGB_4_OUT" "unconnected-(U4-Pad30)" "unconnected-(U4-Pad25)" "unconnected-(U4-Pad24)"
+    "unconnected-(U4-Pad3)" "unconnected-(U4-Pad19)" "unconnected-(U4-Pad18)" "unconnected-(U4-Pad13)" "unconnected-(U4-Pad12)" "unconnected-(U4-Pad11)" "unconnected-(U4-Pad10)" "unconnected-(U4-Pad2)"
+    "unconnected-(U4-Pad1)" "/Adressable RGB/RGB_2_IN" "/Adressable RGB/RGB_4_IN" "RGB_DATA_1" "/Adressable RGB/RGB_3_IN" "unconnected-(U4-Pad4)" "unconnected-(U4-Pad5)" "unconnected-(U4-Pad27)"
+    "Net-(J18-Pad1)" "Net-(R23-Pad1)" "Net-(Q7-Pad1)"
     (clearance_class default)
     (via_rule default)
     (rule
@@ -77,6 +83,16 @@
     (via_rule kicad_default)
     (rule
       (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class power
+    (clearance_class power)
+    (via_rule power)
+    (rule
+      (width 500.0)
     )
     (circuit 
       (use_layer F.Cu B.Cu)

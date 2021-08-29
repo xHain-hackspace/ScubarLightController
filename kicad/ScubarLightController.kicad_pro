@@ -377,7 +377,6 @@
         "microvia_drill": 0.1,
         "name": "power",
         "nets": [
-          "+12V",
           "+28V",
           "+5V",
           "/31V Fairy Lights/L1_A",
@@ -385,16 +384,11 @@
           "/31V Fairy Lights/L2_A",
           "/31V Fairy Lights/L2_B",
           "GND",
-          "Net-(J2-Pad2)",
-          "Net-(J3-Pad1)",
-          "Net-(J6-Pad1)",
           "Net-(J6-Pad2)",
           "Net-(J7-Pad1)",
-          "Net-(J7-Pad2)",
-          "Net-(J9-Pad1)",
-          "Net-(J9-Pad2)"
+          "Net-(J7-Pad2)"
         ],
-        "pcb_color": "rgba(0, 0, 0, 0,000)",
+        "pcb_color": "rgb(0, 0, 0)",
         "schematic_color": "rgb(0, 0, 0)",
         "track_width": 0.5,
         "via_diameter": 0.8,
