@@ -160,7 +160,7 @@
   (net 70 "Net-(J2-Pad1)")
   (net 71 "Net-(J15-Pad1)")
   (net 72 "Net-(J15-Pad2)")
-  (net 73 "Net-(U4-Pad15)")
+  (net 73 "Net-(J16-Pad1)")
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" (layer "F.Cu")
     (tedit 5AE5139B) (tstamp 013b9a32-81f8-4e60-a5e7-4967d1d303a2)
@@ -1279,7 +1279,7 @@
     (pad "14" thru_hole circle (at -12.7 0 270) (size 1.524 1.524) (drill 0.762) (layers *.Cu *.Mask)
       (net 1 "GND") (pinfunction "GND") (pintype "power_in") (tstamp 63d32caa-7225-499e-8d9d-78723e3b46dc))
     (pad "15" thru_hole circle (at -12.7 2.54 270) (size 1.524 1.524) (drill 0.762) (layers *.Cu *.Mask)
-      (net 73 "Net-(U4-Pad15)") (pinfunction "VIN") (pintype "power_in") (tstamp 20c05813-c589-4a01-b315-54aecf9db25c))
+      (net 73 "Net-(J16-Pad1)") (pinfunction "VIN") (pintype "power_in") (tstamp 20c05813-c589-4a01-b315-54aecf9db25c))
     (pad "16" thru_hole circle (at 12.7 -33.02 270) (size 1.524 1.524) (drill 0.762) (layers *.Cu *.Mask)
       (net 13 "S3_SEL") (pinfunction "IO23") (pintype "bidirectional") (tstamp 7741a866-a36b-4462-bb89-18b9c58c09ce))
     (pad "17" thru_hole circle (at 12.7 -30.48 270) (size 1.524 1.524) (drill 0.762) (layers *.Cu *.Mask)
@@ -4277,7 +4277,7 @@
     (fp_line (start 1.27 -1.27) (end 1.27 3.81) (layer "F.Fab") (width 0.1) (tstamp d4fabaf4-8147-4c90-ae63-0468eaf79f12))
     (fp_line (start -0.635 -1.27) (end 1.27 -1.27) (layer "F.Fab") (width 0.1) (tstamp e2e0c05a-1477-4df2-be7f-8733637c113a))
     (pad "1" thru_hole rect locked (at 0 0 270) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
-      (net 73 "Net-(U4-Pad15)") (pinfunction "Pin_1") (pintype "passive") (tstamp 4aa08260-b98d-41dc-b9b8-91e58640605c))
+      (net 73 "Net-(J16-Pad1)") (pinfunction "Pin_1") (pintype "passive") (tstamp 4aa08260-b98d-41dc-b9b8-91e58640605c))
     (pad "2" thru_hole oval locked (at 0 2.54 270) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 6 "+5V") (pinfunction "Pin_2") (pintype "passive") (tstamp b43c196d-e4fc-4a7a-981e-999c4408bcdf))
     (model "${KICAD6_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x02_P2.54mm_Vertical.wrl"
